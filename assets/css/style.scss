@@ -180,6 +180,35 @@ html {
         color: $black;
         font-size: 1.6rem;
 
+        /* Styles for the desktop version */
+        @media (min-width: $mobile) {
+
+
+            article {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 10px;
+
+                .container {
+                    max-width: 1440px;
+                    margin: auto;
+                    padding-inline: 60px;
+                }
+
+                .popular {
+                    grid-column: 1/span 2;
+
+                    .grid-list {
+                        grid-template-columns: 1fr 1fr 1fr;
+                    }
+
+                }
+            }
+
+        }
+
+
+
         /*-----------------------------------*\
         #HEADER
         \*-----------------------------------*/
@@ -289,6 +318,15 @@ html {
                         margin-block-start: 10px;
                         display: flex;
                         gap: 40px;
+
+                        li {
+
+                            .navbar-link {
+                                font-size: $fs-5;
+                            }
+
+
+                        }
                     }
 
                 }
@@ -349,58 +387,63 @@ html {
         #NEW
         \*-----------------------------------*/
         .new {
+
+            @media (min-width: $mobile) {
+                padding-block-start: 100px;
+            }
+
+
             .container {
-                background-color: $very-dark-blue;
-                padding-block-start: 32px;
-                // padding inline is not needed
-                padding-inline: 20px;
                 margin-block-end: 60px;
 
-                @media (min-width: $mobile) {
-                    .container {
-                        max-width: 1440px;
-                        margin: auto;
-                    }
-                }
 
-                .h2 {
-                    font-size: $fs-2;
-                    color: $soft-orange;
-                }
+                .new-wrapper {
+                    padding-inline: 20px;
+                    background-color: $very-dark-blue;
 
-                .grid-list {
-                    padding-block-start: 26px;
+                    .h2 {
 
-                    li {
-                        padding-block: 30px;
-
-                        .card-title {
-                            font-size: $fs-4;
-                            color: $off-white;
-                            padding-block-end: 10px;
-                            transition: $transition-2
-                        }
-
-                        .card-subtext {
-                            color: $grayish-blue;
-                        }
-
-
-                    }
-
-                    li:not(:first-child):not(:last-child) {
-                        /* Styles for the middle list items */
-                        border-top: 1px dotted $grayish-blue;
-                        border-bottom: 1px dotted $grayish-blue;
-                    }
-
-                    .card-title:is(:hover, :focus-visible) {
+                        font-size: $fs-2;
                         color: $soft-orange;
+                        border: 1px solid $very-dark-blue;
+                        padding-block-start: 20px;
                     }
 
+                    .grid-list {
+                        padding-block-start: 26px;
+
+                        li {
+                            padding-block: 30px;
+
+                            .card-title {
+                                font-size: $fs-4;
+                                color: $off-white;
+                                padding-block-end: 10px;
+                                transition: $transition-2
+                            }
+
+                            .card-subtext {
+                                color: $grayish-blue;
+                            }
 
 
+                        }
+
+                        li:not(:first-child):not(:last-child) {
+                            /* Styles for the middle list items */
+                            border-top: 1px dotted $grayish-blue;
+                            border-bottom: 1px dotted $grayish-blue;
+                        }
+
+                        .card-title:is(:hover, :focus-visible) {
+                            color: $soft-orange;
+                        }
+
+
+
+                    }
                 }
+
             }
 
 

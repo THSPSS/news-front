@@ -121,6 +121,7 @@ html body {
   background-color: hsl(36, 100%, 99%);
   color: hsl(0, 0%, 0%);
   font-size: 1.6rem;
+  /* Styles for the desktop version */
   /*-----------------------------------*\
   #HEADER
   \*-----------------------------------*/
@@ -133,6 +134,24 @@ html body {
   /*-----------------------------------*\
   #POPULAR
   \*-----------------------------------*/
+}
+@media (min-width: 575px) {
+  html body article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  html body article .container {
+    max-width: 1440px;
+    margin: auto;
+    padding-inline: 60px;
+  }
+  html body article .popular {
+    grid-column: 1/span 2;
+  }
+  html body article .popular .grid-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 html body .header {
   position: fixed;
@@ -224,6 +243,9 @@ html body .header .container .overlay.active {
     display: flex;
     gap: 40px;
   }
+  html body .header .container .navbar-list li .navbar-link {
+    font-size: 1.6rem;
+  }
 }
 html body .hero {
   -webkit-padding-before: 100px;
@@ -258,47 +280,50 @@ html body .hero .hero-content .hero-title {
 html body .hero .hero-content .hero-subtext {
   color: hsl(236, 13%, 42%);
 }
+@media (min-width: 575px) {
+  html body .new {
+    -webkit-padding-before: 100px;
+            padding-block-start: 100px;
+  }
+}
 html body .new .container {
-  background-color: hsl(240, 100%, 5%);
-  -webkit-padding-before: 32px;
-          padding-block-start: 32px;
-  padding-inline: 20px;
   -webkit-margin-after: 60px;
           margin-block-end: 60px;
 }
-@media (min-width: 575px) {
-  html body .new .container .container {
-    max-width: 1440px;
-    margin: auto;
-  }
+html body .new .container .new-wrapper {
+  padding-inline: 20px;
+  background-color: hsl(240, 100%, 5%);
 }
-html body .new .container .h2 {
+html body .new .container .new-wrapper .h2 {
   font-size: 4.2rem;
   color: hsl(35, 77%, 62%);
+  border: 1px solid hsl(240, 100%, 5%);
+  -webkit-padding-before: 20px;
+          padding-block-start: 20px;
 }
-html body .new .container .grid-list {
+html body .new .container .new-wrapper .grid-list {
   -webkit-padding-before: 26px;
           padding-block-start: 26px;
 }
-html body .new .container .grid-list li {
+html body .new .container .new-wrapper .grid-list li {
   padding-block: 30px;
 }
-html body .new .container .grid-list li .card-title {
+html body .new .container .new-wrapper .grid-list li .card-title {
   font-size: 2.6rem;
   color: hsl(36, 100%, 99%);
   -webkit-padding-after: 10px;
           padding-block-end: 10px;
   transition: 0.5s ease;
 }
-html body .new .container .grid-list li .card-subtext {
+html body .new .container .new-wrapper .grid-list li .card-subtext {
   color: hsl(233, 8%, 79%);
 }
-html body .new .container .grid-list li:not(:first-child):not(:last-child) {
+html body .new .container .new-wrapper .grid-list li:not(:first-child):not(:last-child) {
   /* Styles for the middle list items */
   border-top: 1px dotted hsl(233, 8%, 79%);
   border-bottom: 1px dotted hsl(233, 8%, 79%);
 }
-html body .new .container .grid-list .card-title:is(:hover, :focus-visible) {
+html body .new .container .new-wrapper .grid-list .card-title:is(:hover, :focus-visible) {
   color: hsl(35, 77%, 62%);
 }
 html body .popular .grid-list .popular-card {
