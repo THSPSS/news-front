@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <!-- 
+    - primary meta tags
+  -->  
+  <title>Frontend Mentor | News homepage</title>
+  <meta name="title" content="News">
+  <meta name="description" content="This is a news web application html template made by seon yeong">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+   <!-- 
+   - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+
+   <!-- 
+    - preload images
+   -->
+   <link rel="preload" as="image" href="./assets/images/image-web-3-mobile.jpg">
+   <link rel="preload" as="image" href="./assets/images/image-web-3-desktop.jpg">
+   <link rel="preload" as="image" href="./assets/images/image-top-laptops.jpg">
+
+</head>
+
+<body>
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+        <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" alt="News home" width="46" height="26">
+        </a>
+
+        <nav class="navbar" data-navbar>
+            <button class="nav-close-btn" aria-label="close menu" data-nav-toggler="">
+                <ion-icon name="close-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+            </button>
+    
+            <ul class="navbar-list">
+
+                <li>
+                  <a href="#" class="navbar-link">Home</a>
+                </li>
+      
+                <li>
+                  <a href="#" class="navbar-link">New</a>
+                </li>
+      
+                <li>
+                  <a href="#" class="navbar-link">Popular</a>
+                </li>
+      
+                <li>
+                  <a href="#" class="navbar-link">Trending</a>
+                </li>
+      
+                <li>
+                  <a href="#" class="navbar-link">Categories</a>
+                </li>
+      
+            </ul>
+        </nav>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler="">
+            <ion-icon name="menu-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+        </button>
+
+        <div class="overlay" data-nav-toggler="" data-overlay=""></div>
+    </div>
+  </header>
+  <main>
+    <article>
+        <!--
+            --#HERO
+        -->
+        <section class="section hero" aria-label="home">
+            <div class="container">
+
+              <div class="hero-banner">
+                <figure class="img-holder mobile" style="--width : 300; --height:300;">
+                  <img src="./assets/images/image-web-3-mobile.jpg" width="300" height="300" alt="hero-banner" class="img-cover">
+                </figure>
+
+                <figure class="img-holder desktop" style="--width : 300; --height:300;">
+                  <img src="./assets/images/image-web-3-desktop.jpg" width="300" height="300" alt="hero-banner" class="img-cover">
+                </figure>
+              </div>
+    
+              <div class="hero-content">
+    
+                <h1 class="h1 hero-title">
+                  The Bright<br> 
+                  Future of Web 3.0?
+                </h1>
+    
+                <p class="hero-subtext">
+                    We dive into the next evolution of the web that claims 
+                    to put the power of the platforms back into the hands 
+                    of the people. But is it really fulfilling its promise?
+                </p>
+    
+                <div class="btn-wrapper">
+    
+                  <a href="#" class="btn btn-primary">Read more</a>
+    
+                </div>
+    
+              </div>
+            </div>
+        </section>
+    
+        <!--
+            --#NEW
+        -->
+        <section class="section new" aria-labelledby="new-label">
+            <div class="container">
+              <h2 class="h2 section-title">New</h2>
+
+              <ul class="grid-list">
+
+
+                <li>
+                  <div class="new-card">
+                    <a href="/" class="h4 card-title">Hydrogen VS Electric Cars</a>
+
+                    <p class="card-subtext">
+                      Will hydrogen-fueled cars ever catch up to EVs?
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="new-card">
+                    <a href="/" class="h4 card-title">The Downsides of AI Artistry</a>
+
+                    <p class="card-subtext">
+                      What are the possible adverse effects of on-demand AI image generation?
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="new-card">
+                    <a href="/" class="h4 card-title">Is VC Funding Drying Up?</a>
+
+                    <p class="card-subtext">
+                      Private funding by VC firms is down 50% YOY. We take a look at what that means.
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+                
+            </div>
+        </section>
+
+        <!--
+            --#POPULAR
+        -->
+        <section class="section popular" aria-labelledby="popular-label">
+          <div class="container">
+
+            <ul class="grid-list">
+
+              <li>
+
+                <div class="popular-card">
+                  <figure class="card-img img-holder" style="--width:200;--height:254">
+                    <img src="./assets/images/image-retro-pcs.jpg" width="200" height="254" loading="lazy" alt="image-retro-pcs">
+                  </figure>
+                  
+                  <div>
+                    <p class="card-subtitle">01</p>
+                    <h3 class="h3 card-title">Reviving Retro PCs</h3>
+                    
+                    <p class="card-subtext">
+                      What happens when old PCs are given modern upgrades?
+                    </p>
+                  </div>
+                </div>
+
+              </li>
+
+              <li>
+
+                <div class="popular-card">
+                  <figure class="card-img img-holder" style="--width:200;--height:254">
+                    <img src="./assets/images/image-top-laptops.jpg" width="200" height="254" loading="lazy" alt="image-retro-pcs">
+                  </figure>
+                  
+                  <div>
+                    <p class="card-subtitle">02</p>
+                    <h3 class="h3 card-title">Top 10 Laptops of 2022</h3>
+                    
+                    <p class="card-subtext">
+                      What happens when old PCs are given modern upgrades?
+                    </p>
+                  </div>
+                </div>
+                
+              </li>
+
+              <li>
+
+                <div class="popular-card">
+                  <figure class="card-img img-holder" style="--width:200;--height:254">
+                    <img src="./assets/images/image-gaming-growth.jpg" width="200" height="254" loading="lazy" alt="image-retro-pcs">
+                  </figure>
+                  
+                  <div>
+                    <p class="card-subtitle">03</p>
+                    <h3 class="h3 card-title">The Growth of Gaming</h3>
+                    
+                    <p class="card-subtext">
+                      How the pandemic has sparked fresh opportunities.
+                    </p>
+                  </div>
+                </div>
+                
+              </li>
+
+            </ul>
+
+          </div>
+        </section>        
+    </article>
+  </main>
+  <footer>
+    <div class="attribution">
+      <!-- <div class="container">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+      </div> -->
+    </div>
+  </footer>
+
+      <!-- custom js link -->
+
+      <script src="./assets/js/script.js"></script>
+
+
+      <!-- ionicon link -->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
