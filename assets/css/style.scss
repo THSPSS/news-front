@@ -4,7 +4,7 @@
 
 // Breakpoints
 $mobile: 575px;
-$desktop: 1440px;
+$desktop: 1920px;
 
 $inter: 'Inter', sans-serif;
 
@@ -120,8 +120,9 @@ p {
 /* Styles for the desktop version */
 @media (min-width: $mobile) {
     .container {
-        max-width: 1440px;
+        max-width: 1620px;
         margin: auto;
+        padding-inline: 70px;
     }
 
 }
@@ -186,11 +187,10 @@ html {
 
             article {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-gap: 10px;
+                grid-template-columns: 1.5fr 1fr;
 
                 .container {
-                    max-width: 1440px;
+                    max-width: $desktop;
                     margin: auto;
                     padding-inline: 60px;
                 }
@@ -366,6 +366,8 @@ html {
                     display: block;
                     /* Show the desktop figure */
                 }
+
+
             }
 
             .hero-content {
@@ -377,6 +379,14 @@ html {
 
                 .hero-subtext {
                     color: $dark-grayish-blue
+                }
+
+                /* Styles for the desktop version */
+                @media (min-width: $mobile) {
+
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    padding-block-start: 44px;
                 }
             }
 

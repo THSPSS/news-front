@@ -64,8 +64,9 @@ p {
 /* Styles for the desktop version */
 @media (min-width: 575px) {
   .container {
-    max-width: 1440px;
+    max-width: 1620px;
     margin: auto;
+    padding-inline: 70px;
   }
 }
 .img-cover {
@@ -138,11 +139,10 @@ html body {
 @media (min-width: 575px) {
   html body article {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-template-columns: 1.5fr 1fr;
   }
   html body article .container {
-    max-width: 1440px;
+    max-width: 1920px;
     margin: auto;
     padding-inline: 60px;
   }
@@ -273,12 +273,23 @@ html body .hero .img-holder.desktop {
     /* Show the desktop figure */
   }
 }
+html body .hero .hero-content {
+  /* Styles for the desktop version */
+}
 html body .hero .hero-content .hero-title {
   padding-block: 20px;
   line-height: 1;
 }
 html body .hero .hero-content .hero-subtext {
   color: hsl(236, 13%, 42%);
+}
+@media (min-width: 575px) {
+  html body .hero .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-padding-before: 44px;
+            padding-block-start: 44px;
+  }
 }
 @media (min-width: 575px) {
   html body .new {
