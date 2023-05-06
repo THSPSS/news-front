@@ -5,15 +5,22 @@
  */
 
 const addEventOnElem = function (elem, type, callback) {
-    if (elem.length > 1) {
-      for (let i = 0; i < elem.length; i++) {
+  if (!elem) {
+    return;
+  }
+
+  if (Array.isArray(elem)) {
+    for (let i = 0; i < elem.length; i++) {
+      if (elem[i] && typeof elem[i].addEventListener === 'function') {
         elem[i].addEventListener(type, callback);
       }
-    } else {
+    }
+  } else {
+    if (typeof elem.addEventListener === 'function') {
       elem.addEventListener(type, callback);
     }
   }
-
+}
 
   
 
