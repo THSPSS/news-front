@@ -1,8 +1,8 @@
 'use strict';
 //test
-// let test = "it is test";
+let test = "it is test";
 
-// console.log(test)
+console.log(test)
 
 
 /**
