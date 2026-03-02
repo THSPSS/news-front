@@ -1,9 +1,4 @@
 'use strict';
-//test
-let test = "it is test";
-
-console.log(test)
-
 
 /**
  * add event on element
@@ -33,25 +28,16 @@ const addEventOnElem = function (elem, type, callback) {
  * navbar toggle
  */
 
-const navTogglers = document.querySelectorAll("[data-nav-toggler]");
-const navToggler = document.querySelector("[data-nav-toggler]");
-const navbar = document.querySelector("[data-navbar]");
-const navbarLinks = document.querySelectorAll("[data-nav-link]");
-const overlay = document.querySelector("[data-overlay]");
+const navOpenButton = document.querySelector(".nav-open-btn");
+const navCloseButton = document.querySelector(".nav-close-btn");
 
-const toggleNavbar = function () {
-  console.log("toggle clicked");
+
+navOpenButton.addEventListener('click', () => {
   navbar.classList.toggle("active");
   overlay.classList.toggle("active");
-}
+});
 
-
-
-addEventOnElem(navTogglers, "click", toggleNavbar);
-
-const closeNavbar = function () {
+navCloseButton.addEventListener('click', () => {
   navbar.classList.remove("active");
   overlay.classList.remove("active");
-}
-
-addEventOnElem(navbarLinks, "click", closeNavbar);
+})
