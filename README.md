@@ -1,6 +1,6 @@
 # About Project
 
-- responsive News front homepage
+- width responsive News front homepage
 
 # check webpage here
 
